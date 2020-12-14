@@ -13,6 +13,8 @@ import scala.collection.mutable
  * Implements the RELAX-II algorithm for solving MCMF problems over a graph
  * network.
  *
+ * this code is inspired by the pseudo code given by authors of RELAX-II https://stuff.mit.edu/people/dimitrib/BT_Relax_1988.pdf
+ *
  * Note that this implementation does NOT support minimum capacities / minimum flow
  * properties on the arcs of the graph! As this feature has not been used anywhere
  * in Hire (defaults to 0), it has not been implemented.

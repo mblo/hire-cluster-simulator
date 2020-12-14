@@ -118,5 +118,4 @@ for customization.
   [Sparrow](https://dl.acm.org/doi/10.1145/2517349.2522716),
   [Yarn](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/CapacityScheduler.html),
   [CoCo](https://github.com/camsas/firmament) -- as described in the source code. (Apache License 2.0)
-- MCMF solver, parts inspired from [ICGog/Flowlessly](https://github.com/ICGog/Flowlessly/tree/master/src/solvers) (
-  Apache License 2.0)
+- MCMF solver, parts inspired from [ICGog/Flowlessly](https://github.com/ICGog/Flowlessly/tree/master/src/solvers) (Apache License 2.0), relaxation solver based on [https://stuff.mit.edu/people/dimitrib/BT_Relax_1988.pdf](https://stuff.mit.edu/people/dimitrib/BT_Relax_1988.pdf)
