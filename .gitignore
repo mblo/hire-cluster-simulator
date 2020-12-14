@@ -1,0 +1,100 @@
+job-stats.csv
+public_keys.txt
+plot-workload.pdf
+plot-workload-tasks.pdf
+stats
+experiment_results
+venv
+graph.png
+*.class
+*.tasty
+*.hasTasty
+*.log
+*.swp
+*~
+tags
+traces
+*.csv
+
+# sbt specific
+.cache/
+.history/
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+project/local-plugins.sbt
+.ensime
+.ensime_cache/
+.sbt-scripted/
+local.sbt
+
+# Ignore Eclipse files
+.project
+.classpath
+.prefs
+.settings
+
+# npm
+node_modules
+
+# Visual Studio Code
+.metals/
+.bloop/
+.vscode/
+
+# The vscode app for testing
+vscode-dotty/.vscode-test
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+.idea
+.idea_modules
+*.iml
+*.ipr
+*.iws
+out
+.cache-main
+.cache-tests
+classes/
+
+# Dotty IDE
+/.dotty-ide-dev-port
+/.dotty-ide-artifact
+/.dotty-ide.json
+
+community-build/dotty-bootstrapped.version
+community-build/sbt-dotty-sbt
+
+# Partest
+dotty.jar
+dotty-lib.jar
+tests/partest-generated/
+tests/locks/
+/test-classes/
+
+# Ignore output files but keep the directory
+out/
+build/
+!out/.keep
+testlogs/
+
+# Ignore build-file
+.packages
+/.cache-main
+/.cache-tests
+
+# Mac OS folder attributes
+.DS_Store
+.ipynb_checkpoints
+*.zip
+*.tgz
+*.jar
+env
+sbt.json
+run-*
+evaluate_paper*

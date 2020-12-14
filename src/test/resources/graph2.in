@@ -1,0 +1,516 @@
+c ===========
+p min 81 174
+c ===========
+c == all nodes scheduler-simulator / Test / testOnly 0s
+c - node 0 NN
+n 0 0 NN
+c - node 1 NN
+n 1 0 NN
+c - node 2 NN
+n 2 0 NN
+c - node 3 NN
+n 3 0 NN
+c - node 4 NN
+n 4 0 NN
+c - node 5 NN
+n 5 0 NN
+c - node 6 NN
+n 6 0 NN
+c - node 7 NN
+n 7 0 NN
+c - node 8 NN
+n 8 0 NN
+c - node 9 NN
+n 9 0 NN
+c - node 10 NN
+n 10 0 NN
+c - node 11 NN
+n 11 0 NN
+c - node 12 NN
+n 12 0 NN
+c - node 13 NN
+n 13 0 NN
+c - node 14 NN
+n 14 0 NN
+c - node 15 NN
+n 15 0 NN
+c - node 16 NN
+n 16 0 NN
+c - node 17 NN
+n 17 0 NN
+c - node 18 NN
+n 18 0 NN
+c - node 19 NN
+n 19 0 NN
+c - node 20 MN
+n 20 0 MN
+c - node 21 MN
+n 21 0 MN
+c - node 22 MN
+n 22 0 MN
+c - node 23 MN
+n 23 0 MN
+c - node 24 MN
+n 24 0 MN
+c - node 25 MN
+n 25 0 MN
+c - node 26 MN
+n 26 0 MN
+c - node 27 MN
+n 27 0 MN
+c - node 28 MN
+n 28 0 MN
+c - node 29 MN
+n 29 0 MN
+c - node 30 MN
+n 30 0 MN
+c - node 31 MN
+n 31 0 MN
+c - node 32 MN
+n 32 0 MN
+c - node 33 MN
+n 33 0 MN
+c - node 34 MN
+n 34 0 MN
+c - node 35 MN
+n 35 0 MN
+c - node 36 MN
+n 36 0 MN
+c - node 37 MN
+n 37 0 MN
+c - node 38 MN
+n 38 0 MN
+c - node 39 MN
+n 39 0 MN
+c - node 40 NS
+n 40 0 NS
+c - node 41 NS
+n 41 0 NS
+c - node 42 NS
+n 42 0 NS
+c - node 43 NS
+n 43 0 NS
+c - node 44 NS
+n 44 0 NS
+c - node 45 NS
+n 45 0 NS
+c - node 46 NS
+n 46 0 NS
+c - node 47 NS
+n 47 0 NS
+c - node 48 NS
+n 48 0 NS
+c - node 49 NS
+n 49 0 NS
+c - node 50 NS
+n 50 0 NS
+c - node 51 NS
+n 51 0 NS
+c - node 52 NS
+n 52 0 NS
+c - node 53 NS
+n 53 0 NS
+c - node 54 NS
+n 54 0 NS
+c - node 55 NS
+n 55 0 NS
+c - node 56 NS
+n 56 0 NS
+c - node 57 NS
+n 57 0 NS
+c - node 58 NS
+n 58 0 NS
+c - node 59 NS
+n 59 0 NS
+c - node 60 MS
+n 60 0 MS
+c - node 61 MS
+n 61 0 MS
+c - node 62 MS
+n 62 0 MS
+c - node 63 MS
+n 63 0 MS
+c - node 64 MS
+n 64 0 MS
+c - node 65 MS
+n 65 0 MS
+c - node 66 MS
+n 66 0 MS
+c - node 67 MS
+n 67 0 MS
+c - node 68 MS
+n 68 0 MS
+c - node 69 MS
+n 69 0 MS
+c - node 70 MS
+n 70 0 MS
+c - node 71 MS
+n 71 0 MS
+c - node 72 MS
+n 72 0 MS
+c - node 73 MS
+n 73 0 MS
+c - node 74 MS
+n 74 0 MS
+c - node 75 MS
+n 75 0 MS
+c - node 76 K
+n 76 -2 K
+c - node 77 S
+n 77 0 S
+c - node 78 P
+n 78 0 P
+c - node 79 GN
+n 79 1 GN
+c - node 80 GS
+n 80 1 GS
+c ===========
+c == all arcs
+c - arc 0->4
+a 0 4 0 6 0
+c - arc 0->6
+a 0 6 0 6 0
+c - arc 0->8
+a 0 8 0 6 0
+c - arc 0->10
+a 0 10 0 6 0
+c - arc 0->20
+a 0 20 0 1 0
+c - arc 1->4
+a 1 4 0 6 0
+c - arc 1->6
+a 1 6 0 6 0
+c - arc 1->8
+a 1 8 0 6 0
+c - arc 1->10
+a 1 10 0 6 0
+c - arc 1->21
+a 1 21 0 1 0
+c - arc 2->5
+a 2 5 0 6 0
+c - arc 2->7
+a 2 7 0 6 0
+c - arc 2->9
+a 2 9 0 6 0
+c - arc 2->11
+a 2 11 0 6 0
+c - arc 2->22
+a 2 22 0 1 0
+c - arc 3->5
+a 3 5 0 6 0
+c - arc 3->7
+a 3 7 0 6 0
+c - arc 3->9
+a 3 9 0 6 0
+c - arc 3->11
+a 3 11 0 6 0
+c - arc 3->23
+a 3 23 0 1 0
+c - arc 4->12
+a 4 12 0 2 0
+c - arc 4->13
+a 4 13 0 2 0
+c - arc 4->24
+a 4 24 0 1 0
+c - arc 5->12
+a 5 12 0 2 0
+c - arc 5->13
+a 5 13 0 2 0
+c - arc 5->25
+a 5 25 0 1 0
+c - arc 6->14
+a 6 14 0 2 0
+c - arc 6->15
+a 6 15 0 2 0
+c - arc 6->26
+a 6 26 0 1 0
+c - arc 7->14
+a 7 14 0 2 0
+c - arc 7->15
+a 7 15 0 2 0
+c - arc 7->27
+a 7 27 0 1 0
+c - arc 8->16
+a 8 16 0 2 0
+c - arc 8->17
+a 8 17 0 2 0
+c - arc 8->28
+a 8 28 0 1 0
+c - arc 9->16
+a 9 16 0 2 0
+c - arc 9->17
+a 9 17 0 2 0
+c - arc 9->29
+a 9 29 0 1 0
+c - arc 10->18
+a 10 18 0 2 0
+c - arc 10->19
+a 10 19 0 2 0
+c - arc 10->30
+a 10 30 0 1 0
+c - arc 11->18
+a 11 18 0 2 0
+c - arc 11->19
+a 11 19 0 2 0
+c - arc 11->31
+a 11 31 0 1 0
+c - arc 12->32
+a 12 32 0 1 0
+c - arc 13->33
+a 13 33 0 1 0
+c - arc 14->34
+a 14 34 0 1 0
+c - arc 15->35
+a 15 35 0 1 0
+c - arc 16->36
+a 16 36 0 1 0
+c - arc 17->37
+a 17 37 0 1 0
+c - arc 18->38
+a 18 38 0 1 0
+c - arc 19->39
+a 19 39 0 1 0
+c - arc 20->76
+a 20 76 0 1 50
+c - arc 21->76
+a 21 76 0 1 50
+c - arc 22->76
+a 22 76 0 1 50
+c - arc 23->76
+a 23 76 0 1 50
+c - arc 24->76
+a 24 76 0 1 37
+c - arc 25->76
+a 25 76 0 1 37
+c - arc 26->76
+a 26 76 0 1 37
+c - arc 27->76
+a 27 76 0 1 37
+c - arc 28->76
+a 28 76 0 1 37
+c - arc 29->76
+a 29 76 0 1 37
+c - arc 30->76
+a 30 76 0 1 37
+c - arc 31->76
+a 31 76 0 1 37
+c - arc 32->76
+a 32 76 0 1 25
+c - arc 33->76
+a 33 76 0 1 25
+c - arc 34->76
+a 34 76 0 1 25
+c - arc 35->76
+a 35 76 0 1 25
+c - arc 36->76
+a 36 76 0 1 25
+c - arc 37->76
+a 37 76 0 1 25
+c - arc 38->76
+a 38 76 0 1 25
+c - arc 39->76
+a 39 76 0 1 25
+c - arc 40->44
+a 40 44 0 4 0
+c - arc 40->46
+a 40 46 0 4 0
+c - arc 40->48
+a 40 48 0 4 0
+c - arc 40->50
+a 40 50 0 4 0
+c - arc 41->44
+a 41 44 0 4 0
+c - arc 41->46
+a 41 46 0 4 0
+c - arc 41->48
+a 41 48 0 4 0
+c - arc 41->50
+a 41 50 0 4 0
+c - arc 42->45
+a 42 45 0 4 0
+c - arc 42->47
+a 42 47 0 4 0
+c - arc 42->49
+a 42 49 0 4 0
+c - arc 42->51
+a 42 51 0 4 0
+c - arc 43->45
+a 43 45 0 4 0
+c - arc 43->47
+a 43 47 0 4 0
+c - arc 43->49
+a 43 49 0 4 0
+c - arc 43->51
+a 43 51 0 4 0
+c - arc 44->52
+a 44 52 0 2 0
+c - arc 44->53
+a 44 53 0 2 0
+c - arc 45->52
+a 45 52 0 2 0
+c - arc 45->53
+a 45 53 0 2 0
+c - arc 46->54
+a 46 54 0 2 0
+c - arc 46->55
+a 46 55 0 2 0
+c - arc 47->54
+a 47 54 0 2 0
+c - arc 47->55
+a 47 55 0 2 0
+c - arc 48->56
+a 48 56 0 2 0
+c - arc 48->57
+a 48 57 0 2 0
+c - arc 49->56
+a 49 56 0 2 0
+c - arc 49->57
+a 49 57 0 2 0
+c - arc 50->58
+a 50 58 0 2 0
+c - arc 50->59
+a 50 59 0 2 0
+c - arc 51->58
+a 51 58 0 2 0
+c - arc 51->59
+a 51 59 0 2 0
+c - arc 52->60
+a 52 60 0 1 0
+c - arc 52->61
+a 52 61 0 1 0
+c - arc 53->62
+a 53 62 0 1 0
+c - arc 53->63
+a 53 63 0 1 0
+c - arc 54->64
+a 54 64 0 1 0
+c - arc 54->65
+a 54 65 0 1 0
+c - arc 55->66
+a 55 66 0 1 0
+c - arc 55->67
+a 55 67 0 1 0
+c - arc 56->68
+a 56 68 0 1 0
+c - arc 56->69
+a 56 69 0 1 0
+c - arc 57->70
+a 57 70 0 1 0
+c - arc 57->71
+a 57 71 0 1 0
+c - arc 58->72
+a 58 72 0 1 0
+c - arc 58->73
+a 58 73 0 1 0
+c - arc 59->74
+a 59 74 0 1 0
+c - arc 59->75
+a 59 75 0 1 0
+c - arc 60->76
+a 60 76 0 1 50
+c - arc 61->76
+a 61 76 0 1 50
+c - arc 62->76
+a 62 76 0 1 50
+c - arc 63->76
+a 63 76 0 1 50
+c - arc 64->76
+a 64 76 0 1 50
+c - arc 65->76
+a 65 76 0 1 50
+c - arc 66->76
+a 66 76 0 1 50
+c - arc 67->76
+a 67 76 0 1 50
+c - arc 68->76
+a 68 76 0 1 50
+c - arc 69->76
+a 69 76 0 1 50
+c - arc 70->76
+a 70 76 0 1 50
+c - arc 71->76
+a 71 76 0 1 50
+c - arc 72->76
+a 72 76 0 1 50
+c - arc 73->76
+a 73 76 0 1 65
+c - arc 74->76
+a 74 76 0 1 50
+c - arc 75->76
+a 75 76 0 1 50
+c - arc 78->76
+a 78 76 0 3 0
+c - arc 79->60
+a 79 60 0 1 55
+c - arc 79->61
+a 79 61 0 1 55
+c - arc 79->62
+a 79 62 0 1 55
+c - arc 79->63
+a 79 63 0 1 55
+c - arc 79->64
+a 79 64 0 1 55
+c - arc 79->65
+a 79 65 0 1 55
+c - arc 79->66
+a 79 66 0 1 55
+c - arc 79->67
+a 79 67 0 1 55
+c - arc 79->68
+a 79 68 0 1 55
+c - arc 79->69
+a 79 69 0 1 55
+c - arc 79->70
+a 79 70 0 1 55
+c - arc 79->71
+a 79 71 0 1 55
+c - arc 79->72
+a 79 72 0 1 52
+c - arc 79->74
+a 79 74 0 1 54
+c - arc 79->75
+a 79 75 0 1 54
+c - arc 79->78
+a 79 78 0 2 560
+c - arc 80->20
+a 80 20 0 1 75
+c - arc 80->21
+a 80 21 0 1 75
+c - arc 80->22
+a 80 22 0 1 75
+c - arc 80->23
+a 80 23 0 1 75
+c - arc 80->24
+a 80 24 0 1 75
+c - arc 80->25
+a 80 25 0 1 75
+c - arc 80->26
+a 80 26 0 1 75
+c - arc 80->27
+a 80 27 0 1 75
+c - arc 80->28
+a 80 28 0 1 75
+c - arc 80->29
+a 80 29 0 1 75
+c - arc 80->30
+a 80 30 0 1 75
+c - arc 80->31
+a 80 31 0 1 75
+c - arc 80->32
+a 80 32 0 1 75
+c - arc 80->33
+a 80 33 0 1 75
+c - arc 80->34
+a 80 34 0 1 75
+c - arc 80->35
+a 80 35 0 1 75
+c - arc 80->36
+a 80 36 0 1 75
+c - arc 80->37
+a 80 37 0 1 75
+c - arc 80->38
+a 80 38 0 1 74
+c - arc 80->39
+a 80 39 0 1 75
+c - arc 80->78
+a 80 78 0 1 536
