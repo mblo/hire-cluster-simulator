@@ -58,7 +58,7 @@ script (--worker XX).
    docker run -it -v $PWD:/app --rm asplos21-hire/runner ./src/main/evaluation/experiments/exp-asplos-quick-test.sh --dry
    docker run -it -v $PWD:/app --rm asplos21-hire/runner ./src/main/evaluation/evals/run-paper-eval.sh  \
        -e exp-rerun-asplos-quick-test \   
-       -o . --sweep mu-inp &
+       -o . --sweep mu-inp --ignore time-it:shared-resource-mode:useSimpleTwoStateInpServerFlavorOptions &
    ```
 
 3. **Run all simulations.**
@@ -84,7 +84,7 @@ script (--worker XX).
        -e exp-rerun-asplos-baselines-sparrow \   
        -e exp-rerun-asplos-baselines-yarn \   
        -e exp-rerun-asplos-baselines-coco \   
-       -o .. --sweep mu-inp &
+       -o .. --sweep mu-inp --ignore time-it:shared-resource-mode:useSimpleTwoStateInpServerFlavorOptions &
    
    python3 src/main/evaluation/evals/evaluate_paper_solver.py  \
        -e exp-rerun-asplos-speed-bench \   
