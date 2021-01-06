@@ -10,10 +10,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
     wget https://github.com/sbt/sbt/releases/download/v1.4.4/sbt-1.4.4.zip && \
     unzip sbt-1.4.4.zip && ln -s /sbt/bin/sbt /usr/bin/sbt
 
-# add user
-ARG user=hire-cluster-sim
-ARG uid=9000
-RUN useradd -u ${uid} -s /bin/sh -m ${user}
+# create same user as on host system
+ARG HOST_USER
+ARG HOST_UID
+RUN useradd -u ${HOST_UID} -s /bin/sh -m ${HOST_USER}
 
 # set build directory
 COPY ./requirements.txt /app-build/requirements.txt
@@ -24,15 +24,15 @@ COPY ./docker-entry.sh /app-build/
 
 RUN cd /app-build && \
          pip3 install -r requirements.txt && \
-         mkdir -p /home/${user}/.sbt && \
-         mkdir -p /home/${user}/.cache && \
+         mkdir -p /home/${HOST_USER}/.sbt && \
+         mkdir -p /home/${HOST_USER}/.cache && \
          mkdir -p /app && \
-         chown -R ${user}:${user} /app && \
-         chown -R ${user}:${user} /home/${user}/.sbt && \
-         chown -R ${user}:${user} /home/${user}/.cache && \
-         chown -R ${user}:${user} /app-build
+         chown -R ${HOST_USER}:${HOST_USER} /app && \
+         chown -R ${HOST_USER}:${HOST_USER} /home/${HOST_USER}/.sbt && \
+         chown -R ${HOST_USER}:${HOST_USER} /home/${HOST_USER}/.cache && \
+         chown -R ${HOST_USER}:${HOST_USER} /app-build
 
-USER ${user}
+USER ${HOST_USER}
 RUN cd /app-build && sbt assembly
          
 WORKDIR /app

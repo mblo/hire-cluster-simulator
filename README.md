@@ -21,7 +21,7 @@ This repository holds the code used in the paper.
 
    This prepares Scala, JDK, Python3 and builds the jar:
    ```
-   docker build -t asplos21-hire/runner:latest .
+   docker build --build-arg HOST_USER=$(id -u -n) --build-arg HOST_UID=$(id -u) -t asplos21-hire/runner:latest .
    ```
 
    When you modify the simulator codebase, you must rebuild the jar:
