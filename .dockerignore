@@ -3,3 +3,4 @@
 !project
 !build.properties
 !build.sbt
+!docker-entry.sh
