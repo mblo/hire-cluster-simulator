@@ -26,14 +26,14 @@ import scala.util.Try
 
 case class SimConfig(var scheduler: Option[mutable.ListBuffer[List[String]]] = Some(mutable.ListBuffer()),
                      var runId: Option[Int] = Some(-1),
-                     var simulationTime: Option[SimTypes.simTime] = None, // should be less than 694879 * 1000 (appx 8 days), which is the last event of the workload
+                     var simulationTime: Option[SimTypes.simTime] = Some(3600000), // should be less than 694879 * 1000 (appx 8 days), which is the last event of the workload
                      var workloadTime: Option[SimTypes.simTime] = None,
                      var skipJobsBeforeTime: Option[SimTypes.simTime] = Some(-1),
                      var verbose: Option[Int] = Some(0),
                      var statusReportMessage: Option[Int] = Some(3600),
                      var cellType: Option[String] = Some("ft"),
                      var cellSwitchHomogeneous: Option[String] = Some("homogeneous"),
-                     var cellK: Option[Int] = Some(4),
+                     var cellK: Option[Int] = Some(16),
                      var maxActiveInp: Option[Int] = Some(2),
 
                      var seed: Option[Int] = Some(0),
@@ -65,7 +65,7 @@ case class SimConfig(var scheduler: Option[mutable.ListBuffer[List[String]]] = S
                      var maxResourceUnitServer: Option[NumericalResource] = Some(1000000),
                      var maxResourceUnitSwitches: Option[NumericalResource] = Some(1000000),
                      var scaleCellServerCapacity: Option[Array[Double]] = Some(Array(1, 1)),
-                     var scaleCellSwitchCapacity: Option[Array[Double]] = Some(Array(1, 1)),
+                     var scaleCellSwitchCapacity: Option[Array[Double]] = Some(Array(1, 1, 1)),
 
                      var createInpFlavorStartingFromTime: Option[Int] = Some(-1),
 
@@ -114,8 +114,9 @@ case class SimConfig(var scheduler: Option[mutable.ListBuffer[List[String]]] = S
 object SimRunnerFromCmdArguments {
 
   def main(args: Array[String]): Unit = {
+    val usage = "Example usage: --inp-types netchain,sharp,incbricks,netcache,distcache,harmonia,hovercraft,r2p2  --scheduler kubernetes,resubmit,-10  --scale-cell-servers 5.0,3.0"
     if (args.length == 0) {
-      throw new AssertionError("Example usage: --sim-time 3600000 --verbose  --inp-types netchain,harmonia --scheduler greedy,fallback,10000")
+      throw new AssertionError(usage)
     }
 
     val argList: Seq[String] = args.toList
@@ -318,7 +319,7 @@ object SimRunnerFromCmdArguments {
           })
           tail
         case unknown =>
-          System.err.println(s"Invalid sim config: ${unknown}")
+          System.err.println(s"Invalid sim config: ${unknown}; " + usage)
           throw new RuntimeException
       }
       if (left.nonEmpty)

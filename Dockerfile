@@ -19,17 +19,22 @@ RUN useradd -u ${uid} -s /bin/sh -m ${user}
 COPY ./requirements.txt /app-build/requirements.txt
 COPY ./build.* /app-build/
 COPY ./project /app-build/project
+COPY ./src /app-build/src
 COPY ./docker-entry.sh /app-build/
 
 RUN cd /app-build && \
          pip3 install -r requirements.txt && \
-         sbt assembly && \
+         mkdir -p /home/${user}/.sbt && \
+         mkdir -p /home/${user}/.cache && \
          mkdir -p /app && \
          chown -R ${user}:${user} /app && \
+         chown -R ${user}:${user} /home/${user}/.sbt && \
+         chown -R ${user}:${user} /home/${user}/.cache && \
          chown -R ${user}:${user} /app-build
 
 USER ${user}
-
+RUN cd /app-build && sbt assembly
+         
 WORKDIR /app
 
 ENTRYPOINT ["/app-build/docker-entry.sh"]
