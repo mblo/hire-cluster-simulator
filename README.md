@@ -177,8 +177,9 @@ use the experiment `exp-asplos-quick-test.sh`:
        -o .. --sweep mu-inp --ignore time-it:shared-resource-mode:useSimpleTwoStateInpServerFlavorOptions 
    
    # create plots of hire speed benchmark
-   python3 src/main/evaluation/evals/evaluate_paper_solver.py  \
-       -e exp-rerun-asplos-speed-bench \   
+   docker run -it -v $PWD:/app --rm asplos21-hire/runner \
+      python3 src/main/evaluation/evals/evaluate_paper_solver.py  \
+       -e exp-rerun-asplos-hire-speed-benchmark \   
        -o .. --sweep mu-inp 
    ```
 
