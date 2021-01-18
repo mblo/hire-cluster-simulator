@@ -70,21 +70,23 @@ Download zip archive from [https://zenodo.org/record/4419041/files/traces.zip?do
 Extract archive into this directory. This creates the following nested folder: `THIS_REPO/traces/alibaba_trace_2018/`
 
 ### Manually prepare cluster trace
+This requires appx. 10GB RAM.
 
    1. Download (`batch_task.csv`, `container_meta.csv`, `machine_meta.csv`)
-        from (https://github.com/alibaba/clusterdata/blob/master/cluster-trace-v2018/trace_2018.md)[https://github.com/alibaba/clusterdata/blob/master/cluster-trace-v2018/trace_2018.md]
-        and save them in THIS_REPO/traces/alibaba_trace_2018
-          - [http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/batch_task.tar.gz](http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/batch_task.tar.gz)
-          - [http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/machine_meta.tar.gz](http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/machine_meta.tar.gz)
-          - [http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/container_meta.tar.gz](http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/container_meta.tar.gz)
-    2. Prepare trace for simulator:
+        from [https://github.com/alibaba/clusterdata/blob/master/cluster-trace-v2018/](https://github.com/alibaba/clusterdata/blob/master/cluster-trace-v2018/)
+        and save them in `THIS_REPO/traces/alibaba_trace_2018`
+        - [http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/batch_task.tar.gz](http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/batch_task.tar.gz)
+        - [http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/machine_meta.tar.gz](http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/machine_meta.tar.gz)
+        - [http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/container_meta.tar.gz](http://clusterdata2018pubus.oss-us-west-1.aliyuncs.com/container_meta.tar.gz)
     
-     ```bash
-     # with Docker setup:
-     docker run -it -v $PWD:/app --rm asplos21-hire/runner ./bootstrap-traces.sh  
-     # wihtout Docker:
-     ./bootstrap-traces.sh  
-     ```
+   2. Prepare trace for simulator:
+    
+   ```bash
+   # with Docker setup:
+   docker run -it -v $PWD:/app --rm asplos21-hire/runner ./bootstrap-traces.sh  
+   # wihtout Docker:
+   ./bootstrap-traces.sh  
+   ```
 
 ## Experiment workflow explained
 **All following commands use the Docker setup. If you don't use Docker, simply remove `docker run -it -v $PWD:/app --rm asplos21-hire/runner` from each of the commands.**
@@ -157,7 +159,6 @@ Most simulations use less than 25gb memory (depends on the JVM used).
 We run all experiments on an AMD EPYC 7542 with 512GB RAM
 using `OpenJDK 64-Bit Server VM GraalVM CE 20.1.0 (build 11.0.7+10-jvmci-20.1-b02, mixed mode, sharing)`. 
 
-
 ## Run partial/quick paper experiments
 
 If you want to run a small subset of all experiments (only `seed=0` and `µ={0.05, 0.25, 0.5, 0.75, 1.0}`),
@@ -184,18 +185,19 @@ use the experiment `exp-asplos-quick-test.sh`.
 ## Run all paper experiments
 **All following commands use the Docker setup. If you don't use Docker, simply remove `docker run -it -v $PWD:/app --rm asplos21-hire/runner` from each of the commands.**
 
+These experiments write appx. 150GB of logfiles.
 
    ### Run experiments
    
    ```bash
    # pass "--dry" to check configuration first   
-   # run yarn experiments, takes some minutes with `--worker 15`
+   # run yarn experiments, takes some hours with `--worker 15`
    docker run -it -v $PWD:/app --rm asplos21-hire/runner \
      ./src/main/evaluation/experiments/exp-asplos-baselines-yarn.sh
    # run coco experiments, takes appx. 14 days with `--worker 15`
    docker run -it -v $PWD:/app --rm asplos21-hire/runner \
      ./src/main/evaluation/experiments/exp-asplos-baselines-coco.sh
-   # run k8 experiments, takes some minutes with `--worker 15`
+   # run k8 experiments, takes some hours with `--worker 15`
    docker run -it -v $PWD:/app --rm asplos21-hire/runner \
      ./src/main/evaluation/experiments/exp-asplos-baselines-k8.sh
    # run sparrow experiments, takes some hours with `--worker 15`
